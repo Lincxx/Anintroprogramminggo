@@ -11,12 +11,13 @@ func main() {
 	x[4] = 83
 	x[5] = 93
 
-	//with a range
+	//with a range - this is like a foreach
 	var t float64 = 0
 	for _, v := range x {
 		t += v;
 	}
 	fmt.Println("Range total: ", t / float64(len(x)))
+
 	var total float64 = 0
 	for i :=0; i < len(x); i++ {
 		total += x[i]
