@@ -2,9 +2,13 @@ package main
 
 import "fmt"
 
-func swap (x *int, y *int) {
-	*x = 2
-	*y = 1
+func swap (x, y *int) {
+	//we store a *x in a tmp var
+	var tmp = *x
+	*x = *y
+	*y = tmp
+
+	//short form *x, *y = *y, *x
 }
 
 func main() {
