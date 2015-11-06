@@ -7,15 +7,15 @@ import (
 func WordCount(str string) map[string]int{
 	count := map[string]int{}
 
-	for _, v := range strings.Fields(str) {
-		count[v]++
+	for _, word := range strings.Fields(str) {
+		count[word]++
 	}
 	return count
 }
 
 func main() {
-	str := "I can make this whatever I want"
+	str := "test test"
 	result := WordCount(str)
 
-	fmt.Println(len(result))
+	fmt.Println(result)
 }
