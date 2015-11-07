@@ -1,27 +1,29 @@
 package main
 
 import (
-	"os"
-	"log"
-	"io/ioutil"
 	"fmt"
+	"io/ioutil"
+	"log"
+	"os"
 	//"strings"
+	"net/http"
 )
 
 func main() {
+	resp, err := http.Get("http://www.gutenberg.org/files/2781/old/jusss10.txt")
 
-//	fmt.Fprintln(os.Stderr,"Hello and Welcome. \nWhat is your name")
-//	var name string
-//	fmt.Scan(&name)
+	if err != nil {
+		log.Fatalln("It's broken")
+	}
+	file := resp.Write(resp)
 
-
-	f, err := os.Open(os.Args[1])
+	f, err := os.Open(file)
 
 	if err != nil {
 		log.Fatalln("It's broken")
 	}
 
-	defer f.Close()
+	//defer f.Close()
 
 	//reader := strings.NewReader("some thing")
 
