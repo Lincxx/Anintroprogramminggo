@@ -19,3 +19,5 @@ func main() {
 
 	fmt.Println(result)
 }
+
+//looks for a certain word in files result["word"]
